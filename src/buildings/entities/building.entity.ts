@@ -9,10 +9,10 @@ export class Building {
   name: string;
 
   @Column({ type: 'text' })
-  address: string;
+  city: string;
 
-  @Column({ type: 'int' })
-  yearBuilt: number;
+  @Column({ type: 'date', nullable: true })
+  createdAt: Date = new Date();
 
   constructor(partial?: Partial<Building>) {
     Object.assign(this, partial);

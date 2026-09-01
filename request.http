@@ -1,17 +1,16 @@
 ### create building
-POST http://localhost:3000/api/buildings
+POST http://localhost:3000/api/v1/buildings
 Content-Type: application/json
 
 {
   "name": "Pavillon principal",
-  "address": "7000, rue Marie-Victorin",
-  "yearBuilt": 2005
+  "city": "Montréal"
 }
 
 ### get all buildings
-GET http://localhost:3000/api/buildings
+GET http://localhost:3000/api/v1/buildings
 
 ### get health
-GET http://localhost:3000/api/health
+GET http://localhost:3000/api/v1/health
 ### get specific building
-GET http://localhost:3000/api/buildings/2
+GET http://localhost:3000/api/v1/buildings/2

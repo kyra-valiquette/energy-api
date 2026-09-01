@@ -19,12 +19,11 @@ export class BuildingsService {
         return building;
     }
 
-    addBuilding(name: string, address: string, yearBuilt: number) {
+    addBuilding(name: string, city: string) {
         const building = new Building({
           id: this.buildings.length + 1,
           name,
-          address,
-          yearBuilt
+          city
         });
         this.buildings.push(building);
         return building;
