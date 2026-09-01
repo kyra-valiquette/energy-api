@@ -13,3 +13,5 @@ GET http://localhost:3000/api/buildings
 
 ### get health
 GET http://localhost:3000/api/health
+### get specific building
+GET http://localhost:3000/api/buildings/2

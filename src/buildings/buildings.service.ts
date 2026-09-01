@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException} from '@nestjs/common';
 import { Building } from './entities/building.entity.js';
 
 @Injectable()
@@ -7,6 +7,16 @@ export class BuildingsService {
 
     findAll(): Building[]{
         return this.buildings;
+    }
+
+    findOne(id: number): Building {
+        const building = this.buildings.find((b) => b.id === id);
+        
+        if (!building) {
+            throw new NotFoundException(`Le bâtiment avec l'ID ${id} est introuvable.`);
+        }
+        
+        return building;
     }
 
     addBuilding(name: string, address: string, yearBuilt: number) {
