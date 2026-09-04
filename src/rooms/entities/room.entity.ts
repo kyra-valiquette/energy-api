@@ -1,5 +1,5 @@
 import { randomUUID } from "crypto";
-import { CreateRoomDto } from "../dto/create-room.dto";
+import { CreateRoomDto } from "../dto/create-room.dto.js";
 
 export class Room {
     id: string;

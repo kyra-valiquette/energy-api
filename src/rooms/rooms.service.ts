@@ -1,7 +1,7 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
-import { CreateRoomDto } from './dto/create-room.dto';
-import { UpdateRoomDto } from './dto/update-room.dto';
-import { Room } from './entities/room.entity';
+import { CreateRoomDto } from './dto/create-room.dto.js';
+import { UpdateRoomDto } from './dto/update-room.dto.js';
+import { Room } from './entities/room.entity.js';
 
 @Injectable()
 export class RoomsService {
